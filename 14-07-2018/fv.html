@@ -1,0 +1,90 @@
+<!Doctype html>
+<html>
+<head>
+<title>form validation</title>
+</head>
+
+<body>
+<Script type="text/javascript">
+function validForm (){
+var a=document.form1.username.value;
+var b=document.form1.email.value;
+var c=document.form1.phone.value;
+var d=document.form1.password.value;
+var e=document.form1.password2.value;
+
+if(a=="" || a==null){
+
+alert("please enter your username")
+
+}
+
+else if(b=="" || b==null){
+
+alert("please enter your email")
+
+}
+else if(c=="" || c==null){
+
+alert("please enter your phone")
+
+}
+else if(d=="" || d==null){
+
+alert("please enter your password")
+
+}
+else if(e=="" || e==null){
+
+alert("please enter your again password")
+
+}
+if(e!=d){
+
+alert("password donot match")
+
+}
+else{
+var Display=window.open('','','width=600,height=600')
+message="<ul><li><br>username:</br></li>"+a;
+message+="<ul><li><br>email:</br></li>"+b;
+message+="<ul><li><br>phone:</br></li>"+c;
+message+="<ul><li><br>password:</br></li>"+d;
+message+="<ul><li><br>password2:</br></li>"+e;
+message+="</ul>"
+Display.document.write(message);
+}
+}
+</script>
+<form id="form1" name="form1" method="post">
+	<table width="600" height="400" border="1" bgcolor="darkseagreen">
+	<tbody>
+	<tr>
+	<th>username</th>
+	<td><input type="text" name="" id="" value=""</td>
+	</tr>
+	<tr>
+	<th>email</th>
+	<td><input type="email" name="mail" id="mail" value=""</td>
+	</tr>
+	<tr>
+	<th>phone</th>
+	<td><input type="number" name="phone" id="" value="880"</td>
+	</tr>
+	<tr>
+	<th>password</th>
+	<td><input type="password" name="password" id="password" value=""</td>
+	</tr>
+	<tr>
+	<th>confirm password</th>
+	<td><input type="password" name="password2" id="password2" value=""</td>
+	</tr>
+	<tr>
+	<th></th>
+	<td><input type="button" onClick="validForm()" name="submit" id="submit" value="submit"</td>
+	</tr>
+	</tbody>
+	</table>
+	</form>
+	</body>
+	</html>

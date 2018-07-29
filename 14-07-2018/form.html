@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<script type="text/javascript" >
+function validForm(){
+
+var a=document.form1.username.value;
+var b=document.form1.phone.value;
+var c=document.form1.email.value;
+var d=document.form1.password.value;
+var e=document.form1.password2.value;
+
+
+if(a=="" || a==null){
+
+alert("Please Enter Your Username")
+}
+else if(a.length<4 || a.length>12)
+{  
+  alert("Username must be at Least 4 & Less than 12 characters digit.");  
+  return false;
+ 
+  }	
+	
+	 if(b=="" || b==null){
+
+alert("Please Enter Your Phone Number")
+} 
+	else if(b.length<13)
+{  
+  alert("Phone Number must be at Least 11 degit");  
+  return false;
+ 
+  }
+	
+	else if(c=="" || c==null){
+
+alert("Please Enter Your Email")
+}
+
+	
+else if(d=="" || d==null){
+
+alert("Please Enter Your Password")
+}
+
+else if(e=="" || e==null){
+alert("Please Enter Your Your Password Again")
+}
+
+else if(e!=d){
+alert("Password donot Match")
+}
+
+
+
+else {
+
+var Display=window.open('','','width=600,height=600');
+message="<ul><li><b>Userame:</b></li>"+a;
+message+="<li><b>Phone</b></li>"+b;
+message+="<li><b>Email</b></li>"+c;
+message+="<li><b>Password</b></li>"+d;
+message+="<li><b>Password2</b></li>"+e;
+message+="</ul>"
+Display.document.write(message);
+}
+}
+</script>
+
+<form id="form1" name="form1" method="post" >
+  <table width="633" height="413" border="1" bgcolor="hotpink">
+    <tbody>
+      <tr>
+        <td>Username</td>
+        <td><label for="textfield">:</label>
+        <input type="text" name="username" id="username"></td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td><label for="number">:</label>
+        <input name="number" type="phone" id="phone" value="880"></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><label for="email">:</label>
+        <input name="email" type="email" id="email"></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><label for="password">:</label>
+        <input type="password" name="password" id="password"></td>
+      </tr>
+      <tr>
+        <td>Confirm Password</td>
+        <td><label for="password2">:</label>
+        <input type="password" name="password2" id="password2"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input type="button" onClick="validForm()" name="submit" id="submit" value="Submit"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+</body>
+</html>
