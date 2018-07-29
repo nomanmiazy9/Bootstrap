@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<body>
+	<div style="margin:0 auto"
+<form action="index.html" method="post">
+<table width="30%">
+<tr>
+<th>Name</th>
+<td><input type="text" name="name"></td>
+</tr>
+<tr>
+<th>Contact</th>
+<td><input type="text" name="contact"></td>
+</tr>
+<tr>
+<th>Remarks</th>
+<td><input type="text" name="remarks"></td>
+</tr>
+<tr>
+<th>Sex</th>
+<td><input type="radio" name="gender" value="male">male
+<input type="radio" name="gender" value="female">female
+</td>
+</tr>
+<tr>
+<th>course</th>
+<td><input type="checkbox" name="nt" value="NT">NT
+<input type="checkbox" name="j2ee" value="J2EE">J2EE
+<input type="checkbox" name="wdpf" value="WDPF">WDPF
+</td>
+</tr>
+<tr>
+<th>Location</th>
+<td>
+<select name="location">
+<option>select a location</option>
+<option value="Dhaka">Dhaka</option>
+<option value="Dinajpur">Dinajpur</option>
+<option value="Chandpur">Chandpur</option>
+</td>
+</tr>
+<tr>
+<td><input type="button" value="submit" onclick="validform()"></td>
+</tr>
+</table>
+</form>
+<script>
+function validform(){
+
+		var vname = document.forms["myform"]["name"].value;
+		var vcontact = document.forms["myform"]["contact"].value;
+		var vremarks = document.forms["myform"]["remarks"].value;
+		var vsex = document.forms["myform"]["gender"].value;
+		var vcourses ="";
+			if(document.forms["myform"].nt.checked){
+			vcourses+= document.forms["myform"]["nt"].value;
+			}
+			if(document.forms["myform"].j2ee.checked){
+			vcourses+= document.forms["myform"]["j2ee"].value;
+			}
+			if(document.forms["myform"].wdpf.checked){
+			vcourses+= document.forms["myform"]["wdpf"].value;
+			}
+		var vlocation = document.forms["myform"]["location"].value;
+
+		win.window.open("","","width:400");
+		win.document.write("Name:"+name+"<br>");
+		win.document.write("Contact:"+contact+"<br>");
+		win.document.write("Remarks:"+remarks+"<br>");
+		win.document.write("Sex:"+sex+"<br>");
+		win.document.write("Courses:"+course+"<br>");
+		win.document.write("Location:"+location+"<br>");
+
+		}
+
+
+
+</script>
+
+
+
+</body>
+</head>
+</html>

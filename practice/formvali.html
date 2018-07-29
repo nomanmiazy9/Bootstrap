@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+	<style>
+	
+	
+		.message{
+		color:red;
+		}
+	
+	
+	</style>
+	
+</head>
+
+<body>
+<form name="myform">
+	<table width="30%">
+<tr>
+<th>Name</th>
+<td><input type="text" name="name">
+<br><span id="aa" class="message"></span>
+</td>
+</tr>
+<tr>
+<th>Contact</th>
+<td><input type="number" name="contact">
+<br><span id="bb" class="message"></span>
+</td>
+</tr>
+<tr>
+<th>Email</th>
+<td><input type="Email" name="Email">
+<br><span id="cc" class="message"></span>
+</td>
+</tr>
+<tr>
+<th>Gender</th>
+<td><input type="radio" name="gender">Male
+<input type="radio" name="gender">Female
+<br><span id="dd" class="message"></span>
+</td>
+</tr>
+<tr>
+<th>Level</th>
+<td><input type="checkbox">SSC
+<input type="checkbox">HSC
+<input type="checkbox">BA
+<br><span id="ee" class="message"></span>
+</td>
+</tr>
+<tr>
+<th>Location</th>
+<td><option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<br><span id="ff" class="message"></span>
+</td>
+</tr>
+<tr>
+<th>Remarks</th>
+<td><input type="textarea">
+<br><span id="gg" class="message"></span>
+</td>
+</tr>
+<tr>
+<th></th>
+<td><input type="button" value="submit" onclick="validform"></td>
+</tr>
+</table>
+</form>
+
+	<script>
+
+	function validform(){
+	
+		var name=document.myform.name.value;
+		var contact=document.myform.contact.value;
+		var email=document.myform.email.value;
+		var gender=document.myform.gender.value;
+		var level=document.myform.name.value;
+		var location=document.myform.name.value;
+		var remarks=document.myform.name.value;
+		
+		if(name==""){
+			document.getElementById("aa").innerHTML="Enter your Name";
+		}
+		if(contact==""){
+			document.getElementById("bb").innerHTML="Enter your contact";
+		}
+		if(email==""){
+			document.getElementById("cc").innerHTML="Enter your email";
+		}
+		if(gender==""){
+			document.getElementById("dd").innerHTML="Enter your gender";
+		}
+		if(label==""){
+			document.getElementById("ee").innerHTML="Enter your label";
+		}
+		if(location==""){
+			document.getElementById("ff").innerHTML="Enter your location";
+		}
+		if(remarks==""){
+			document.getElementById("gg").innerHTML="Enter your remarks";
+		}
+		
+		
+	}
+</script>
+
+</body>
+</html>

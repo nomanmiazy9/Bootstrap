@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<form name="myform">
+<table>
+<tr>
+<th>Name</th>
+<td><input type="text" name="name"></td>
+</tr>
+<tr>
+<th>Contact</th>
+<td><input type="text" name="contact"></td>
+</tr>
+<tr>
+<th>Remarks</th>
+<td><input type="textarea" name="remarks"></td>
+</tr>
+<tr>
+<th>Sex</th>
+<td><input type="Radio" name="gender" value="male">Male
+	<input type="Radio" name="gender" value="female">FeMale
+</td>
+</tr>
+<tr>
+<th>Courses</th>
+<td><input type="checkbox" name="nt" value="NT">NT
+	<input type="checkbox" name="wdpf" value="WDPF">WDPF
+	<input type="checkbox" name="j2ee" value="J2EE">J2EE
+
+</td>
+</tr>
+<tr>
+<th>Location</th>
+<td>
+<select name="location">
+<option>select a location</option>
+<option value="Dhaka">Dhaka</option>
+<option value="Chandpur">Chandpur</option>
+<option value="Dinajpur">Dinajpur</option>
+</td>
+</tr>
+<tr>
+<th></th>
+<td><input type="button" value="submit" id="" onclick="validform"/></td>
+</tr>
+</table>
+</form>
+<script>
+	
+	function validform(){
+		var name= document.myform.name.value;
+		var contact= document.myform.contact.value;
+		var remarks= document.myform.remarks.value;
+		var sex= document.myform.gender.value;
+		var courses= "";
+		var location= document.myform.location.value;
+		
+		w=window.open('','','height=400px,width=500px');
+		w.document.write('<html1><head></head><body>');
+		w.document.write('<Name:'+name+'<br>'+'Contact:'+contact+'<br>'+'Remarks:'+remarks+'<br>'+'Sex:'+gender+'<br>'+'Courses:'+courses+'<br>'+'Location:'+location+);
+		w.document.write('<br><br><button onclick="window.close()">close</button>');
+		w.document.write('</body></html1>');
+	}
+</script>
+
+</body>
+</html>

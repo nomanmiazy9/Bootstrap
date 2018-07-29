@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" >
+function ValidEmail(){
+var emilReg=/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\[A-z]{2,4}$/i;
+
+if(document.myForm.myemail.value.search(emailReg)==-1)
+
+alert("Enter Your valid Email Address")
+
+else if(document.myForm.myemail.value != document.myForm.myemail1.value)
+	alert("Your Email Address does not match")
+	
+	else("your Email Address is valid")
+}
+</script>
+</head>
+<body>
+<form name="myForm">
+<table>
+<tr>
+<th>Email</th>
+<td><input type="text" name="myemail"></td>
+</tr>
+<tr>
+<th>Retype Email</th>
+<td><input type="text" name="myemail1"></td>
+</tr>
+<tr>
+<td><input type="button" name="valid" value="Validate Email" onclick="ValidEmail()"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

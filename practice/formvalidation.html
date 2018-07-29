@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Validation</title>
+</head>
+
+<body>
+<script type="text/javascript">
+function validForm(){
+var a = document.form1.fullname.value;	
+var b = document.form1.address.value;	
+var c = document.form1.email.value;
+var d = document.form1.password.value;	
+var e = document.form1.password2.value;	
+var f = document.form1.location.value;	
+var g = "";		
+	if(document.form1.nt.checked){
+		g+= document.form1.nt.value;
+	}
+	if(document.form1.j2ee.checked){
+		g+= document.form1.j2ee.value;
+	}
+	if(document.form1.wdpf.checked){
+		g+= document.form1.wdpf.value;
+	}
+	
+
+var Display = window.open('','','width=600,height=600');
+message="<ul><li><b>Name:</b></li>"+a;	
+message+="<ul><li><b>Address</b></li>"+b;	
+message+="<ul><li><b>Email</b></li>"+c;	
+message+="<ul><li><b>Password</b></li>"+d;	
+message+="<ul><li><b>Confirm Password</b></li>"+e;
+message+="<ul><li><b>location</b></li>"+f;
+message+="<ul><li><b>Course</b></li>"+g;	
+message+="</ul>"
+Display.document.write(message);	
+
+	
+}	
+
+</script>
+
+<form id="form1" name="form1" method="post">
+  <table width="832" border="0" bgcolor="#B77778">
+    <tbody>
+      <tr>
+        <th width="257" scope="row">Name</th>
+        <td width="559"><input type="text" name="fullname" id="fullname"></td>
+      </tr>
+      <tr>
+        <th scope="row">Address</th>
+        <td><textarea name="address" id="address"></textarea></td>
+      </tr>
+      <tr>
+        <th scope="row">Email</th>
+        <td><input type="email" name="email" id="email"></td>
+      </tr>
+      <tr>
+        <th scope="row">Password</th>
+        <td><input type="password" name="password" id="password"></td>
+      </tr>
+      <tr>
+        <th scope="row">Confirm Password</th>
+        <td><input type="password" name="password2" id="password2"></td>
+      </tr>
+	  <tr>
+	  <th>Location</th>
+	  <td><select name="location">
+
+	  <option>select a location</option>
+	  <option value="Dhaka">Dhaka</option>
+	   <option value="Dinajpur">Dinajpur</option>
+	    <option value="Chandpur">Chandpur</option>
+	  </select>
+	  </td>
+	  </tr>
+	  <tr>
+	  <th>Course</th>
+	  <td><input type="checkbox" name="nt" value="NT">NT
+		<input type="checkbox" name="j2ee" value="J2ee">J2ee
+		<input type="checkbox" name="wdpf" value="WDPF">WDPF
+	  </td>
+	  
+	  </tr>
+      <tr>
+        <th scope="row">&nbsp;</th>
+        <td><input type="button" name="submit" onClick="validForm()" id="submit" value="Submit">  <input type="reset" name="reset"  id="reset" value="Reset"></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+</body>
+</html>

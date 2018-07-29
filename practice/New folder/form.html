@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+<style>
+.message{
+color:red;
+}
+</style>
+</head>
+<body>
+<form name="Myform">
+<table width="20%">
+<tr>
+<th>Name</th>
+<td><input type="text" name="name">
+<br><span id="aa" class="message"></span>
+</td>
+</tr>
+<tr>
+<th>Contact</th>
+<td><input type="number" name="contact">
+<br><span id="aa" class="message"></span>
+</td>
+</tr>
+<tr>
+<th>Email</th>
+<td><input type="email" name="email">
+<br><span id="aa" class="message"></span>
+</td>
+</tr>
+<tr>
+<th>Remarks</th>
+<td><input type="textarea" name="remarks">
+<br><span id="aa" class="message"></span>
+</td>
+</tr>
+<tr>
+<th>sex</th>
+<td><input type="radio" name="gender">male
+<input type="radio" name="gender">female
+<br><span id="aa" class="message"></span>
+
+</td>
+</tr>
+<tr>
+<th>location</th>
+<td>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<br><span id="aa" class="message"></span>
+</td>
+</tr>
+<tr>
+<th>level</th>
+<td><input type="checkbox">SSC
+<input type="checkbox">HSC
+<input type="checkbox">BA
+<br><span id="aa" class="message"></span>
+</td>
+</tr>
+<tr>
+<th></th>
+<td><input type="button" value="submit" onclick="validform()"></td>
+</tr>
+</body>
+</form>
+<script>
+
+</script>
+function validform(){
+var name=document.Myform.name.value;
+var Contact=document.Myform.Contact.value;
+var Email=document.Myform.Email.value;
+var Remarks=document.Myform.Remarks.value;
+var gender=document.Myform.gender.value;
+var location=document.Myform.location.value;
+var name=level.Myform.level.value;
+
+
+
+}
+
+</table>
+</html>

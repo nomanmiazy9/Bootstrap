@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<form>
+<table>
+<tbody>
+<tr>
+<th>Name</th>
+<td><input type="text" name="text"></td>
+</tr>
+<tr>
+<th>Contact</th>
+<td><input type="text" name="contact"></td>
+</tr>
+<tr>
+<th>Remarks</th>
+<td><input type="text" name="remarks"></td>
+</tr>
+<tr>
+<th>Sex</th>
+<td><input type="radio" name="gender">male
+<input type="radio" name="gender">female
+</td>
+</tr>
+<tr>
+<th>Location</th>
+<td><option value="Dhaka">Dhaka</option>
+<option value="Dhinajpur">Dhinajpur</option>
+<option value="Khulna">Khulna</option>
+</td>
+</tr>
+<tr>
+<th>Course</th>
+<td><input type="checkbox" name="nt" value="NT">NT
+<input type="checkbox" name="wdpf" value="WDPF">WDPF
+</td>
+</tr>
+<tr>
+<th></th>
+<td><input type="button" value="submit" id="" onClick="validform()"></td>
+</tr>
+</tbody>
+</table>
+</form>
+<script>
+
+	function validform(){
+		var name= document.myform.name.value;
+		var contact= document.myform.contact.value;
+		var remarks= document.myform.remarks.value;
+		var sex= document.myform.gender.value;
+		var location= document.myform.location.value;
+		var course= document.myform.course.value;
+		
+	
+		w=window.open("","","width:400");
+		w.document.write("Name:"+name+"<br>"+"Contact:"+contact+"<br>"+"Remarks:"+remarks+"<br>"+"Sex:"+sex+"<br>"+);
+	}
+</script>
+</body>
+
+</html>

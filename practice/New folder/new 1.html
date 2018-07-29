@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+	<div style="margin:0 auto; width:400px">
+<form name="myform">
+	<table>
+		<tr>
+		<th>Name</th>
+		<td><input type="text" name="name"></td>
+		</tr>
+		<tr>
+		<th>Contact</th>
+		<td><input type="text" name="contact"></td>
+		</tr>
+		<tr>
+		<th>Remarks</th>
+		<td><input type="text" name="remarks"></td>
+		</tr>
+		<tr>
+		<th>Sex</th>
+		<td><input type="radio" name="gender" value="male">male
+			<input type="radio" name="gender" value="female">female
+		</td>
+		</tr>
+		<tr>
+		<th>Course</th>
+		<td><input type="checkbox" name="nt" value="NT">NT
+		<input type="checkbox" name="j2ee" value="J2EE">J2EE
+		<input type="checkbox" name="wdpf" value="WDPF">WDPF
+		</td>
+		</tr>
+		<tr>
+		<th>Location</th>
+		<td><select name="location">
+		<option>select a location</option>
+		<option value="Dhaka">Dhaka</option>
+		<option value="Dhinajpur">Dhinajpur</option>
+		<option value="Chandpur">Chandpur</option>
+		</td>
+		</tr>
+	</table>
+</form>
+	<center>
+		<button onclick="validform()">submit</button>
+	</center>
+	</div>
+	<script>
+		function validform(){
+			var vname= document.forms["myform"]["name"].value;
+			var vcontact= document.forms["myform"]["contact"].value;
+			var Remarks= document.forms["myform"]["remarks"].value;
+			var vsex= document.forms["myform"]["gender"].value;
+			var vcourses= "";
+				if(document.forms["myform"].nt.checked){
+					vcourses+= document.forms["myform"]["nt"].value;
+				}
+				if(document.forms["myform"].j2ee.checked){
+					vcourses+= document.forms["myform"]["j2ee"].value;
+				}
+				if(document.forms["myform"].wdpf.checked){
+					vcourses+= document.forms["myform"]["wdpf"].value;
+				}
+			var vlocation= document.forms["myform"]["location"].value;
+			
+			win=window.open("","","width=400");
+			win.document.write("<h2><center>Form Output</h2></center><hr>");
+			win.document.write("Name:"+vname+"<br>");
+			win.document.write("Contact:"+vcontact+"<br>");
+			win.document.write("Remarks:"+Remarks+"<br>");
+			win.document.write("Sex:"+vsex+"<br>");
+			win.document.write("Course:"+vcourses+"<br>");
+			win.document.write("Location:"+vlocation+"<br>");
+			
+			
+		
+		}
+	</script>
+</body>
+</html>

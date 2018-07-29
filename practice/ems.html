@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			.message{
+				color:red;
+				}
+				</style>
+	</head>			
+		<body>
+			<div style="margin: 0 auto; width: 400px;">
+			<form name="myform">
+			<table>
+				<tr>
+					<th>Email</th>
+					<td>:</td>
+						<td><input type="email" name="emal"/></td>
+						<td><span id="aa" class="message"></span></td> 
+					</tr>
+			</table>
+			</form>
+			
+			<center>
+				<button onClick="emailValidation()">Submit</button>
+			</center>
+			</div>
+			
+			<script>
+				function emailValidation(){
+					var vemal = document.forms["myform"]["emal"].value;
+					
+					if(vemal==""){
+					document.getElementById("aa").innerHTML="Enter a valid email";
+						return false;
+					}else
+					if(vemal.indexOf("@",0)<0){
+					
+					document.getElementById("aa").innerHTML="Enter a '@' sign";
+						return false;
+					}else
+					if(vemal.indexOf(".",0)<0){
+					
+					document.getElementById("aa").innerHTML="Enter a (.) dot  sign";
+						return false;
+					}else{
+					document.getElementById("aa").innerHTML=" ";
+					
+					win=window.open("","","width=400");
+					win.document.write("Email:"+vemal+"<br>");
+					}
+					
+				}
+			
+			</script>
+		</body>
+	
+</html>

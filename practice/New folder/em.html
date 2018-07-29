@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<style>
+	.message{
+		color:red;
+	}
+</style>
+</head>
+<body>
+	<div style="margin:0 auto; width:400px;">
+<form name="myform">
+<table>
+<tr>
+<th>Email</th>
+<td><input type="email" name="vem"></td>
+<td><span id="aa" class="message"></td>
+</tr>
+</table>
+</form>
+	<center>
+		<button onclick="validEmail()">submit</button>
+	</center>
+</div>
+	<script>
+		function validEmail(){
+			var vem= document.forms["myform"]["vem"].value;
+			if(vem==""){
+			document.getElementById("aa").innerHTML="Enter valid email";
+				return false;
+			}
+				else if(vem.indexOf("@",0)<0){
+			document.getElementById("aa").innerHTML="Enter '@' sign";
+				return false;
+			}
+				else if(vem.indexOf(".",0)<0){
+			document.getElementById("aa").innerHTML="Enter '.' dot sign";
+				return false;
+			}else
+			document.getElementById("aa").innerHTML="";
+			win=window.open("","","width=400");
+			win.document.write("<h2><center>Email Output</h2></center><hr>");
+			win.document.write("Email:"+vem);	
+		}
+	</script>
+</body>
+</html>
